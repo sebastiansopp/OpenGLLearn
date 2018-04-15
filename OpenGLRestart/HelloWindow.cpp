@@ -36,7 +36,7 @@ int main()
 	GLFWmonitor** monitors = glfwGetMonitors(&count);
 	for (int i = 0; i < count; i++) {
 		const char* name = glfwGetMonitorName(monitors[i]);
-		std::cout << name << " ist Monitor Nummer: " << i << std::endl;
+		std::cout << name << " ist Mein Monitor Nummer: " << i << std::endl;
 	}
 
 
