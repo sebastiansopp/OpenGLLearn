@@ -71,7 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\OpenGLCoding\Dependencies\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\OpenGLCoding\Dependencies\Libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\OpenGLCoding\Dependencies\Libs\glfw;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -118,6 +118,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Users\Sebastian\Downloads\glad (1)\glad.c" />
+    <ClCompile Include="HelloWindow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
