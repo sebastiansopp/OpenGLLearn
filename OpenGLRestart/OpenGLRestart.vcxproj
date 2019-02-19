@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{2A963611-CABF-4F79-9F9A-DD7616E4D526}</ProjectGuid>
     <RootNamespace>OpenGLRestart</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -70,8 +70,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\OpenGLCoding\Dependencies\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\OpenGLCoding\Dependencies\Libs\glfw;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\sebastian\Documents\OpenGLLearn\ThirdParty\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\sebastian\Documents\OpenGLLearn\ThirdParty\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\sebastian\Documents\OpenGLLearn\ThirdParty\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\sebastian\Documents\OpenGLLearn\ThirdParty\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,6 +93,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -117,7 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Users\Sebastian\Downloads\glad (1)\glad.c" />
+    <ClCompile Include="glad.c" />
     <ClCompile Include="HelloWindow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
